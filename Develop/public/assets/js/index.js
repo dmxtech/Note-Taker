@@ -13,13 +13,13 @@ if (window.location.pathname === '/notes') {
 }
 
 // Show an element
-const show = (elem) => {
-  elem.style.display = 'inline';
+const show = (noteList) => {
+  noteList.style.display = 'inline';
 };
 
 // Hide an element
-const hide = (elem) => {
-  elem.style.display = 'none';
+const hide = (saveNoteBtn) => {
+  saveNoteBtn.style.display = 'none';
 };
 
 // activeNote is used to keep track of the note in the textarea
