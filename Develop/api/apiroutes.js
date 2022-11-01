@@ -38,7 +38,7 @@ router.delete('/api/notes/:id', (req, res) => {
     const noteId = req.params.id;
     console.log("noteid", noteId);
     console.log("notedata", noteData);
-    //console.log("note.id", note.id);
+    //console.log("id", id);
     noteData = noteData.filter((note) => note.id !== noteId);
     fs.writeFile('./db/db.json', JSON.stringify(noteData));
     console.log(`Note ${noteId} has been deleted 🗑️`);
