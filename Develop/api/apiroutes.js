@@ -1,5 +1,5 @@
 const fs = require('fs');
-const noteData = require('../db/db.json');
+let noteData = require('../db/db.json');
 const router = require("express").Router();
 const { uuid } = require('uuidv4');
 // GET// GET Route for retrieving all the note
@@ -34,14 +34,15 @@ router.post('/api/notes', (req, res) => {
     }
 });
 
-router.delete(`/api/notes/:id`, (req, res) => {
+router.delete('/api/notes/:id', (req, res) => {
     const noteId = req.params.id;
+    console.log("noteid", noteId);
+    console.log("notedata", noteData);
+    //console.log("note.id", note.id);
+    noteData = noteData.filter((note) => note.id !== noteId);
+    fs.writeFile('./db/db.json', JSON.stringify(noteData));
+    console.log(`Note ${noteId} has been deleted 🗑️`);
 
-    db = noteData.filter((note) => note.id != noteId);
-    writeToFile('./db/db.json', noteData);
-
-    // Respond to the DELETE request
-    res.json(`Item ${noteId} has been deleted 🗑️`);
 });
 
 module.exports = router;
