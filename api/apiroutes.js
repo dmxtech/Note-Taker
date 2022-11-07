@@ -7,7 +7,7 @@ router.get('/api/notes', (req, res) => {
     //JSON.parse(noteData)
 
     res.json(noteData);
-    router.get('/api/notes', (req, res) => { res.sendFile(__dirname + '/public/notes.html') });
+    router.get('/api/notes', (req, res) => { res.sendFile(noteData + '../public/notes.html') });
 });
 
 

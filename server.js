@@ -14,8 +14,8 @@ app.use(htmlroutes);
 
 let port = process.env.PORT;
 if (port == null || port == "") {
-    port = 3005;
+    port = 8000;
 }
 app.listen(PORT, () => {
-    console.log(`Example app listening at http://localhost:${port}`);
+    console.log(`Example app listening at http://localhost:${PORT}`);
 });
