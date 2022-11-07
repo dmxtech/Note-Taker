@@ -20,7 +20,6 @@
     "path": "^0.12.7",
     "uuidv4": "^6.2.13"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dmxtech/Note-Taker.git"

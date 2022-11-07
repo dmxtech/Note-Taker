@@ -6,7 +6,8 @@ const { uuid } = require('uuidv4');
 router.get('/api/notes', (req, res) => {
     //JSON.parse(noteData)
 
-    res.json(noteData)
+    res.json(noteData);
+    router.get('/api/notes', (req, res) => { res.sendFile(__dirname + '/public/notes.html') });
 });
 
 
