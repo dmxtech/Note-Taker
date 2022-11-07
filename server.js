@@ -11,6 +11,11 @@ app.use(express.static('public'));
 app.use(apiroutes);
 app.use(htmlroutes);
 
+
+let port = process.env.PORT;
+if (port == null || port == "") {
+    port = 8000;
+}
 app.listen(PORT, () => {
     console.log(`Example app listening at http://localhost:${PORT}`);
 });
