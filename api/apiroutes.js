@@ -4,15 +4,15 @@ const router = require("express").Router();
 const { uuid } = require('uuidv4');
 // GET// GET Route for retrieving all the note
 router.get('/api/notes', (req, res) => {
-    //JSON.parse(noteData)
+
 
     res.json(noteData);
-    router.get('/api/notes', (req, res) => { res.sendFile(noteData + './public/notes.html') });
+
 });
 
 
 router.post('/api/notes', (req, res) => {
-    console.log(req.body);
+    //console.log(req.body);
 
     if (req.body) {
         const newNote = {
@@ -38,8 +38,8 @@ router.post('/api/notes', (req, res) => {
 
 router.delete('/api/notes/:id', (req, res) => {
     const noteId = req.params.id;
-    console.log("noteid", noteId);
-    console.log("notedata", noteData);
+    //console.log("noteid", noteId);
+    //console.log("notedata", noteData);
     //console.log("id", id);
     noteData = noteData.filter((note) => note.id !== noteId);
     //console.log("newdata", newData);
