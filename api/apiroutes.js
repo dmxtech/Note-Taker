@@ -1,5 +1,5 @@
 const fs = require('fs');
-let noteData = require('../db/db.json');
+let noteData = require('../Develop/db/db.json');
 const router = require("express").Router();
 const { uuid } = require('uuidv4');
 // GET// GET Route for retrieving all the note

@@ -1,8 +1,8 @@
 const express = require('express');
 const app = express();
 const PORT = 3005;
-const htmlroutes = require("./Develop/api/htmlroutes");
-const apiroutes = require("./Develop/api/apiroutes")
+const htmlroutes = require("./api/htmlroutes");
+const apiroutes = require("./api/apiroutes")
 
 
 app.use(express.json());
