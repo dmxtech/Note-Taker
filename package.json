@@ -1,7 +1,10 @@
 {
+  "engines": {
+    "node": "v16.16.0"
+  },
   "name": "note-taker",
   "version": "1.0.0",
-  "description": "",
+  "description": "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
   "main": "server.js",
   "scripts": {
     "start": "node server",
@@ -9,12 +12,24 @@
     "test": "jest",
     "dev": "dev"
   },
-  "author": "",
+  "author": "Javier Contreras",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
     "fs": "^0.0.1-security",
     "path": "^0.12.7",
     "uuidv4": "^6.2.13"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmxtech/Note-Taker.git"
+  },
+  "keywords": [
+    "notetaker"
+  ],
+  "bugs": {
+    "url": "https://github.com/dmxtech/Note-Taker/issues"
+  },
+  "homepage": "https://github.com/dmxtech/Note-Taker#readme"
 }
