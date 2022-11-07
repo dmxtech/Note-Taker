@@ -7,7 +7,7 @@ router.get('/api/notes', (req, res) => {
     //JSON.parse(noteData)
 
     res.json(noteData);
-    router.get('/api/notes', (req, res) => { res.sendFile(noteData + '../public/notes.html') });
+    router.get('/api/notes', (req, res) => { res.sendFile(noteData + './public/notes.html') });
 });
 
 
@@ -30,6 +30,7 @@ router.post('/api/notes', (req, res) => {
                 console.log(console.error());
             }
             console.log(`Note added successfully 🚀`);
+            res.json(noteData);
         })
 
     }
@@ -48,7 +49,7 @@ router.delete('/api/notes/:id', (req, res) => {
         }
     })
     console.log(`Note ${noteId} has been deleted 🗑️`);
-
+    res.json(noteData);
 });
 
 module.exports = router;
