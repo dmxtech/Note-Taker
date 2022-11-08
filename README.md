@@ -1,4 +1,4 @@
-
+  
   # Note taker
 
    [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -44,6 +44,8 @@
 
   ## credits
   Tec de Monterrey
+  ##Heroku
+  https://nototas.herokuapp.com/
 
   ## License
   Licensed under the [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) license
