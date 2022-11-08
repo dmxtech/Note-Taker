@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const PORT = 3056;
+//let PORT = 3056;
 const htmlroutes = require("./api/htmlroutes");
 const apiroutes = require("./api/apiroutes")
 
@@ -12,7 +12,7 @@ app.use(apiroutes);
 app.use(htmlroutes);
 
 
-let port = process.env.PORT;
+let PORT = process.env.PORT || 3000;
 // if (port == null || port == "") {
 //     port = 3055;
 // }

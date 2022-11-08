@@ -12,7 +12,7 @@ router.get('/api/notes', (req, res) => {
 
 
 router.post('/api/notes', (req, res) => {
-    //console.log(req.body);
+    console.log("req n body", req.body);
 
     if (req.body) {
         const newNote = {
@@ -22,10 +22,11 @@ router.post('/api/notes', (req, res) => {
 
         };
         noteData.push(newNote);
+        console.log("notedata", noteData);
 
 
 
-        fs.writeFile('./db/db.json', JSON.stringify(noteData), (err) => {
+        fs.writeFile('./Develop/db/db.json', JSON.stringify(noteData), (err) => {
             if (err) {
                 console.log(console.error());
             }
@@ -39,11 +40,11 @@ router.post('/api/notes', (req, res) => {
 router.delete('/api/notes/:id', (req, res) => {
     const noteId = req.params.id;
     //console.log("noteid", noteId);
-    //console.log("notedata", noteData);
+    console.log("notedata", noteData);
     //console.log("id", id);
     noteData = noteData.filter((note) => note.id !== noteId);
     //console.log("newdata", newData);
-    fs.writeFile('./db/db.json', JSON.stringify(noteData), (err) => {
+    fs.writeFile('./Develop/db/db.json', JSON.stringify(noteData), (err) => {
         if (err) {
             console.log(console.error());
         }
